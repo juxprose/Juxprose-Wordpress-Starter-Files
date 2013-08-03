@@ -56,7 +56,7 @@ Author URI: http://juxprose.com
 			@extend .menu-inline;
 			
 			a {
-				@include links-white;
+				@include links-light;
 				@include single-transition(all, 0.2s, ease-in-out);
 				background: $base-clr;
 				padding-top: $base-num;
