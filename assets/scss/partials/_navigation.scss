@@ -75,3 +75,48 @@ Author URI: http://juxprose.com
 
 		}
 	}
+
+  /* Responsive menu
+  -------------------------------------------------------- */
+
+		// Toggle - all
+		a.menu-link {
+			display: block;
+		}
+
+		// Main nav - all
+    nav[role=navigation] {
+      clear: both;
+      -webkit-transition: all 0.3s ease-out;  
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+		.js nav[role=navigation] {
+			overflow: hidden;
+			max-height: 0;
+		}
+
+    nav[role=navigation].active {
+      max-height: 15em;
+    }
+
+    nav[role=navigation] li a {
+      @media #{$small} {
+
+      }
+    }
+
+		// Medium > screens
+    @media only screen and (min-width:768px) {
+       
+	    a.menu-link {
+	      display: none;
+	    }
+
+	    .js nav[role=navigation] {
+	      max-height: none;
+	    }
+    }	
