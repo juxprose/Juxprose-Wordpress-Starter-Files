@@ -38,15 +38,15 @@ Author URI: http://juxprose.com
 /* Font size
   -------------------------------------------------------- */ 
   
-  @function em($target, $context: $base-font) {
+  @function em($target, $context: $base-fnt-size) {
      @if $target == 0 { @return 0 }
      @return $target / $context + 0em;
   }
 
-  $fnt-lrg: em(26px, 14px);
-  $fnt-med: em(18px, 14px);
-  $fnt-reg: em(14px, 14px);
-  $fnt-sml: em(12px, 14px);
+  $fnt-lrg: em(26px, 16px);
+  $fnt-med: em(18px, 16px);
+  $fnt-reg: em(14px, 16px);
+  $fnt-sml: em(12px, 16px);
 
 
   /* Breakpoints
