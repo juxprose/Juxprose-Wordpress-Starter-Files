@@ -31,7 +31,40 @@ textarea {
 	line-height: $base-line-height;
 }
 
+/* Posts / Pages
+  -------------------------------------------------------- */
+	
+	.entry-content {
 
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: $base-num;
+    }
+
+    ul {
+      margin: 0 0 $base-num 0;
+    }
+
+		li {
+      list-style: none;
+		}
+
+    blockquote {
+      color: darken($clr-secondary, 15%);
+      font-style: italic;
+      position: relative;
+
+      i {
+        position: absolute;
+        left: -20px;
+        top: 3px;
+      }
+
+      cite {
+        font-weight: bold;
+      }
+    }
+	}
+	
 /* Links
   -------------------------------------------------------- */
 
