@@ -33,21 +33,47 @@ textarea {
 
 /* Posts / Pages
   -------------------------------------------------------- */
-	
-	.entry-content {
+  
+  .entry-content {
 
+    // Headers
     h1, h2, h3, h4, h5, h6 {
       margin-bottom: $base-num;
     }
 
-    ul {
-      margin: 0 0 $base-num 0;
+    // Paragraphs
+    p {
+      margin-bottom: $base-num/2;
     }
 
-		li {
-      list-style: none;
-		}
+    // Lists
+    dt {
+      font-weight: bold;
+    }
 
+    // Tags 
+    address {
+      margin-bottom: $base-num;
+    }
+
+    abbr {
+      font-weight: bold;
+    }
+
+    acronym {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    cite {
+      font-weight: bold;
+    } 
+    
+    q {
+      font-style: italic;
+    }   
+
+    // Blockquotes
     blockquote {
       color: darken($clr-secondary, 15%);
       font-style: italic;
@@ -58,12 +84,9 @@ textarea {
         left: -20px;
         top: 3px;
       }
-
-      cite {
-        font-weight: bold;
-      }
     }
-	}
+  }
+  
 	
 /* Links
   -------------------------------------------------------- */
