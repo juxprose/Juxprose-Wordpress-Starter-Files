@@ -14,10 +14,11 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/assets/img/favicon.png?v=20131809" />
 
 <!-- IE -->
 <!--[if (lt IE 9) & (!IEMobile)]>
-	<script src="<?php bloginfo( 'template_directory' ); ?>/js/selectivizr-min.js"></script>
+	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/selectivizr-min.js"></script>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
