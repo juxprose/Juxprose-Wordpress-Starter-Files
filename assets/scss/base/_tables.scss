@@ -1,15 +1,15 @@
 /*==============================================================
 
-Media
+Tables
 
-File: SCSS Partial (/scss/partials/_media.scss)
+File: SCSS Partial (/scss/base/_tables.scss)
 Compiled to: css/global.css
 Created: 16/11/2013
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Description: Image and video content
+Description: Tables base
 Author: David Flindall
 Author URI: http://juxprose.com
 
@@ -17,28 +17,22 @@ Author URI: http://juxprose.com
 */
 
 
-/* Images
+/* Base
   -------------------------------------------------------- */
 
-img, video, object {
-	height: auto;
-	max-width: 100%;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid $clr-keyline;
 }
 
-iframe {
-	margin-bottom: $base-num;
+th {
+	text-align: left;
+	border: 1px solid $clr-keyline;
+	padding: 0.2em;
 }
 
-figure {
-	margin-bottom: $base-num;
-	
-	img {
-		margin-bottom: $base-num/4;
-	}
+td {
+	border: 1px solid $clr-keyline;
+	padding: 0.2em;
 }
-
-figcaption {
-	font-style: italic;
-}
-
-

@@ -21,7 +21,7 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
 	$base-clr: rgb(0,0,0);
-	$base-fnt: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	$base-fnt: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	$base-fnt-size: 16px;
 	$base-line-height: 1.5;   
   $base-num: 1em;
@@ -32,12 +32,21 @@ Author URI: http://juxprose.com
 
   $clr-primary: rgb(0,0,0);
   $clr-secondary: rgb(0,0,0);
+  $clr-tert: rgb(0,0,0);
+  $clr-quad: rgb(0,0,0);
+
   $clr-highlight: lighten ($clr-primary, 20%);
+  $clr-keyline: rgb(0,0,0);
+  $clr-bckgrd: rgb(0,0,0);  
 
 
-/* Font size
+/* Fonts
   -------------------------------------------------------- */ 
   
+  // Family
+  $fnt-secondary: Verdana, Geneva, sans-serif;
+
+  // Sizes
   @function em($target, $context: $base-fnt-size) {
      @if $target == 0 { @return 0 }
      @return $target / $context + 0em;
@@ -49,13 +58,19 @@ Author URI: http://juxprose.com
   $fnt-sml: em(12px, 16px);
 
 
-  /* Breakpoints
-    -------------------------------------------------------- */
+/* Layout
+  -------------------------------------------------------- */ 
 
-    $small: "only screen and (max-width:767px)";
-    $medium: "only screen and (min-width:768px) and (max-width:1023px)";
-    $large: "only screen and (min-width:1024px)";
+  $max-width: 1024px;
 
-    //@media #{$small} {
-    //  background: red;
-    // }  
+
+/* Breakpoints
+  -------------------------------------------------------- */
+
+  $bp-sml: "only screen and (max-width:767px)";
+  $bp-med: "only screen and (min-width:768px) and (max-width:1023px)";
+  $bp-lrg: "only screen and (min-width:1024px)";
+
+  //@media #{$small} {
+  //  background: red;
+  // }  

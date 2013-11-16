@@ -1,0 +1,95 @@
+/*==============================================================
+
+Wordpress > Articles
+
+File: SCSS Partial (/scss/objects/_wp-articles.scss)
+Compiled to: css/global.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Specific to Wordpress styles
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+/* Entry content
+  -------------------------------------------------------- */
+  
+  .entry-content {
+
+		// Lists
+  	ul, ol {
+			margin: 0 $base-num $base-num $base-num;
+			line-height: 1.3;
+
+			li {
+				margin-bottom: $base-num/2;
+
+				// Nested list
+				ul, ol {
+					margin: $base-num/2 0 0 $base-num;
+				}
+			}
+  	}
+
+		// Styles
+		ul {
+			list-style: square;
+		}
+
+	  ol {
+	  	list-style: decimal;
+	  } 
+  }
+
+
+
+	.entry-summary {
+	}
+
+	.sticky {
+	}
+
+	.hentry { 
+	}
+
+	.byline {
+		display: none;
+	}
+
+	.single .byline,
+	.group-blog .byline {
+		display: inline;
+	}
+
+	.page-links {
+		clear: both;
+		margin: 0 0 1.5em;
+	}	
+
+
+/* Alignment
+  -------------------------------------------------------- */
+
+	.alignleft {
+		display: inline;
+		float: left;
+		margin-right: 1.5em;
+	}
+
+	.alignright {
+		display: inline;
+		float: right;
+		margin-left: 1.5em;
+	}
+
+	.aligncenter {
+		clear: both;
+		display: block;
+		margin: 0 auto;
+	}

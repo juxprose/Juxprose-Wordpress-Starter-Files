@@ -1,6 +1,6 @@
 /*==============================================================
 
-Layout
+Forms
 
 File: SCSS Partial (/scss/base/_forms.scss)
 Compiled to: css/style.css
@@ -20,50 +20,61 @@ Author URI: http://juxprose.com
 /* Forms
   -------------------------------------------------------- */
 
-	input[type="checkbox"],
-	input[type="radio"] {
-		box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
-		padding: 0; /* Addresses excess padding in IE8/9 */
-	}
-	input[type="search"] {
-		-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-		-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-		-moz-box-sizing:    content-box;
-		box-sizing:         content-box;
-	}
-	input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-		-webkit-appearance: none;
-	}
-	button::-moz-focus-inner,
-	input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
-		border: 0;
-		padding: 0;
-	}
-	input[type="text"],
-	input[type="email"],
-	input[type="password"],
-	input[type="search"],
-	textarea {
-		color: #666;
-		border: 1px solid #ccc;
-		border-radius: 3px;
-	}
-	input[type="text"]:focus,
-	input[type="email"]:focus,
-	input[type="password"]:focus,
-	input[type="search"]:focus,
-	textarea:focus {
-		color: #111;
-	}
-	input[type="text"],
-	input[type="email"],
-	input[type="password"],
-	input[type="search"] {
-		padding: 3px;
-	}
-	textarea {
-		overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
-		padding-left: 3px;
-		vertical-align: top; /* Improves readability and alignment in all browsers */
-		width: 98%;
-	}
+form > div {
+	margin-bottom: $base-num;
+}
+
+form ol, form ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+label {
+	display: block;
+	padding-bottom: $base-num/4;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+input, textarea {
+	width: 100%;
+	border: 1px solid $clr-keyline;
+	padding: $base-num/2 0.65rem;
+}
+
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+	-webkit-appearance: none;
+}
+
+button, input[type="submit"] {
+	padding: $base-num/2;
+	background: $clr-bckgrd;
+	border: 1px solid $clr-keyline;
+	cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 0.3em;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}

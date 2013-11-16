@@ -1,15 +1,15 @@
 /*==============================================================
 
-Media
+Layout
 
-File: SCSS Partial (/scss/partials/_media.scss)
+File: SCSS Partial (/scss/objects/_layout.scss)
 Compiled to: css/global.css
 Created: 16/11/2013
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Description: Image and video content
+Description: Layout blocks
 Author: David Flindall
 Author URI: http://juxprose.com
 
@@ -17,28 +17,11 @@ Author URI: http://juxprose.com
 */
 
 
-/* Images
+/* Content blocks
   -------------------------------------------------------- */
 
-img, video, object {
-	height: auto;
-	max-width: 100%;
-}
-
-iframe {
-	margin-bottom: $base-num;
-}
-
-figure {
-	margin-bottom: $base-num;
-	
-	img {
-		margin-bottom: $base-num/4;
+	.content-block {
+		max-width: $max-width; 
+		margin: 0 auto;
+		padding: $base-num*4 $base-num;
 	}
-}
-
-figcaption {
-	font-style: italic;
-}
-
-

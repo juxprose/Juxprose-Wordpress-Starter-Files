@@ -38,18 +38,29 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
 @import "base/main";
-@import "base/typography";
-@import "base/layout";
+@import "base/global-classes";
+@import "base/lists";
+@import "base/links";
 @import "base/forms";
-@import "base/accessibility";
 @import "base/media";
-@import "base/wordpress";
+@import "base/tables";
+@import "base/text";
 @import "base/print";
 
 
 /*  Objects
   -------------------------------------------------------- */
 
-@import "objects/modules";
 @import "objects/navigation";
 @import "objects/buttons";
+@import "objects/layout";
+@import "objects/wp-articles";
+@import "objects/wp-images";
+@import "objects/wp-widgets";
+
+
+
+
+
+
+

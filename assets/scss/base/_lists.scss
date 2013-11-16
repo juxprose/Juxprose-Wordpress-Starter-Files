@@ -1,15 +1,15 @@
 /*==============================================================
 
-Layout
+Lists
 
-File: SCSS Partial (/scss/partials/_layout.scss)
+File: SCSS Partial (/scss/base/_lists.scss)
 Compiled to: css/global.css
 Created: 16/11/2013
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Description: Primary layout elements
+Description: Base rules for lists
 Author: David Flindall
 Author URI: http://juxprose.com
 
@@ -17,25 +17,27 @@ Author URI: http://juxprose.com
 */
 
 
-/* Helpers
+/* Primary lists
   -------------------------------------------------------- */
 
-  .group {
-    @include clearfix;
+	ol, ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+/* Definition lists
+  -------------------------------------------------------- */
+
+  dl {
+  	overflow: hidden;
+  	margin: 0 0 $base-num;
   }
 
-  .align-r {
-    text-align: right;
+  dt {
+  	font-weight: bold;
   }
 
-  .align-l {
-    text-align: left;
-  }
-
-  .float-r {
-    float: right;
-  }
-
-  .float-l {
-    float: left;
+  dd {
+  	margin-left: 0;
   }
