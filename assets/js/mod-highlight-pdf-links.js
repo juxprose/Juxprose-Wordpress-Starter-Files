@@ -1,1 +1,1 @@
-jQuery("a[href$='pdf']").addClass("link-pdf").prepend('<i class="fa-file-text-o"></i>&nbsp;');
+jQuery("a[href$='pdf']").addClass("link-pdf").prepend('<i class="fa fa-file-text-o"></i>&nbsp;');

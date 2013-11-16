@@ -1,2 +1,2 @@
 // Add icon to blockquotes within posts and pages
-jQuery('.entry-content blockquote').prepend('<i class="fa-quote-left"></i>');
+jQuery('.entry-content blockquote').prepend('<i class="fa fa-quote-left"></i>');
