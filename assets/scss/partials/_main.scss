@@ -1,0 +1,30 @@
+/*==============================================================
+
+Main
+
+File: SCSS Partial (/scss/partials/_main.scss)
+Compiled to: css/global.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Base rules on HTML element
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+/* Base
+  -------------------------------------------------------- */
+
+  html {
+    background: rgb(255,255,255);
+    color: $base-clr;
+    font: $base-fnt-size/$base-line-height $base-fnt;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  
