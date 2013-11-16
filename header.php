@@ -22,14 +22,8 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!-- Typekit 
-<script>try{Typekit.load();}catch(e){}</script> -->
-
-<!-- Font Awesome http://fortawesome.github.io/Font-Awesome/ 
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
-
-<!-- Pure grids http://purecss.io/grids/
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/grids-min.css"> -->
+<!-- Font Awesome -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 <!-- GA -->
 <!-- <script>
@@ -47,8 +41,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div class="hfeed site-wrapper">
 	<?php do_action( 'before' ); ?>
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

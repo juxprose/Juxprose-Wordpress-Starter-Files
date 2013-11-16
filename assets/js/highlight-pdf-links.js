@@ -1,1 +1,0 @@
-jQuery("a[href$='pdf']").addClass("link-pdf").prepend('<i class="icon-file-text-alt"></i>&nbsp;');
