@@ -21,7 +21,10 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
 	.content-block {
+		background: blue;
+		border-bottom: 5px solid pink;
+		
 		max-width: $max-width; 
 		margin: 0 auto;
-		padding: $base-num*4 $base-num;
+		padding: $base-num*2 $base-num $base-num $base-num;
 	}

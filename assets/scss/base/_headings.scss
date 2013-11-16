@@ -1,0 +1,42 @@
+/*==============================================================
+
+Headings
+
+File: SCSS Partial (/scss/base/_headings.scss)
+Compiled to: css/style.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Forms
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+/* Base headers
+  -------------------------------------------------------- */
+
+  h1 {
+		font-size: $fnt-lrg;
+  }
+
+  h2 {
+  	font-size: $fnt-med;
+  }
+
+  h3, h4, h5, h6 {
+		font-size: $fnt-reg;
+  }
+
+
+/* Special headers
+  -------------------------------------------------------- */
+
+  .giga {
+		font-size: $fnt-xlrg;
+		font-family: $fnt-heading;
+  }

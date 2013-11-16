@@ -21,7 +21,7 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
 	$base-clr: rgb(0,0,0);
-	$base-fnt: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	$base-fnt: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	$base-fnt-size: 16px;
 	$base-line-height: 1.5;   
   $base-num: 1em;
@@ -45,6 +45,7 @@ Author URI: http://juxprose.com
   
   // Family
   $fnt-secondary: Verdana, Geneva, sans-serif;
+  $fnt-heading: HelveticaNeueLT-UltraLight;
 
   // Sizes
   @function em($target, $context: $base-fnt-size) {
@@ -52,10 +53,12 @@ Author URI: http://juxprose.com
      @return $target / $context + 0em;
   }
 
+  $fnt-xlrg: em(36px, 16px);
   $fnt-lrg: em(26px, 16px);
   $fnt-med: em(18px, 16px);
   $fnt-reg: em(14px, 16px);
   $fnt-sml: em(12px, 16px);
+  $fnt-xsml: em(12px, 16px);
 
 
 /* Layout
