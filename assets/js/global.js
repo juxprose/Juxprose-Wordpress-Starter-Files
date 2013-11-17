@@ -1,5 +1,3 @@
 // @codekit-append "css3-mediaqueries.js"
 // @codekit-append "menu-responsive.js"
-// @codekit-append "mod-highlight-external-links.js"
-// @codekit-append "mod-highlight-pdf-links.js"
-// @codekit-append "mod-blockquote.js"
+// @codekit-append "scripts.js"
