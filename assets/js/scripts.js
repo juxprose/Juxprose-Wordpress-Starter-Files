@@ -8,3 +8,6 @@ jQuery('.entry-content a:not(:has(img))').filter(function() {
 
 // Add icon to blockquotes within posts and pages
 jQuery('.entry-content blockquote').prepend('<i class="fa fa-quote-left"></i>');
+
+// Fitvids
+jQuery(".entry-content").fitVids();
