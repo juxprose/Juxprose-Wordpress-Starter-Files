@@ -25,4 +25,6 @@ Author URI: http://juxprose.com
     color: $base-clr;
     font: #{$base-fnt-size}/#{$base-line-height} $base-fnt;
     -webkit-text-size-adjust: 100%;
+		-ms-word-wrap: break-word;
+		word-wrap: break-word;    
   }

@@ -20,16 +20,39 @@ Author URI: http://juxprose.com
 /* Base headers
   -------------------------------------------------------- */
 
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 0 0 $base-num;
+    line-height: 1.3;
+  }
+
   h1 {
-		font-size: $fnt-lrg;
+    font-size: $fnt-xlrg;
+    margin: 0 0 $base-num/2;
+
+    @media #{$bp-sml} {
+      font-size: $fnt-lrg;
+    }   
   }
 
   h2 {
-  	font-size: $fnt-med;
+    font-size: $fnt-lrg;
+
+    @media #{$bp-sml} {
+      font-size: $fnt-med;
+    }       
   }
 
-  h3, h4, h5, h6 {
-		font-size: $fnt-reg;
+  h3 {
+    font-size: $fnt-med;
+
+    @media #{$bp-sml} {
+      font-size: $fnt-reg;
+    }       
+  }
+
+  h4, h5, h6 {
+    font-size: $fnt-reg;      
   }
 
 
@@ -37,6 +60,14 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
   .giga {
-		font-size: $fnt-xlrg;
-		font-family: $fnt-heading;
+    font-size: $fnt-giga;
+    font-family: $fnt-heading;
+    font-weight: normal;
+    color: $pink;
+    letter-spacing: 1px;
+
+    @media #{$bp-sml} {
+      font-size: $fnt-giga-smaller;
+      line-height: 1.1;
+    }
   }
