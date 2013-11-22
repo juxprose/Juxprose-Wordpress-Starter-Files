@@ -28,9 +28,10 @@ table {
 }
 
 th {
-	text-align: left;
+	background: $clr-bckgrd;
 	border: 1px solid $clr-keyline;
 	padding: $base-num/2;
+	text-align: left;
 }
 
 td {
