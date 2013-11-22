@@ -42,14 +42,15 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
   blockquote {
-    color: darken($clr-primary, 15%);
+    color: lighten($clr-primary, 35%);
     font-style: italic;
     position: relative;
 
-    i {
+    // Font Awesome quote icon
+    .fa-quote-left {
       position: absolute;
-      left: -20px;
-      top: 3px;
+      left: -25px;
+      top: 5px;
     }
   }
 

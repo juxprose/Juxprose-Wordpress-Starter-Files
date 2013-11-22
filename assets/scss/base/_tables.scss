@@ -24,15 +24,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	border: 1px solid $clr-keyline;
+	margin-bottom: $base-num*2;
 }
 
 th {
 	text-align: left;
 	border: 1px solid $clr-keyline;
-	padding: 0.2em;
+	padding: $base-num/2;
 }
 
 td {
 	border: 1px solid $clr-keyline;
-	padding: 0.2em;
+	padding: $base-num/2;
 }
