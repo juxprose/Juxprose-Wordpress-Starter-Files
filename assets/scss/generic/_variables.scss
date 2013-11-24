@@ -70,9 +70,12 @@ Author URI: http://juxprose.com
 /* Breakpoints
   -------------------------------------------------------- */
 
-  $bp-sml: "only screen and (max-width:767px)";
+  $bp-sml: "only screen and (max-width:320px)";
+  $bp-tab: "only screen and (min-width:321px) and (max-width:1023px)";
   $bp-med: "only screen and (min-width:768px) and (max-width:1023px)";
   $bp-lrg: "only screen and (min-width:1024px)";
+
+  $bp-sml-up: "only screen and (min-width:321px)";
 
   //@media #{$small} {
   //  background: red;

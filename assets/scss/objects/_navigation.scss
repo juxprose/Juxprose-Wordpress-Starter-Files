@@ -89,12 +89,17 @@ Author URI: http://juxprose.com
 		}											
 	}
 
-  /* Responsive menu
+  /* Responsive site menu
   -------------------------------------------------------- */
 
 		// Toggle - all
 		a.menu-link {
-			display: block;
+			@include inline-block;
+			background: $base-clr;
+			color: rgb(255,255,255);
+			clear: both;
+			padding: $base-num;
+			text-decoration: none;
 		}
 
 		// Main nav - all
@@ -113,17 +118,24 @@ Author URI: http://juxprose.com
 		}
 
     nav[role=navigation].active {
-      max-height: 15em;
+      max-height: 20em;
     }
 
-    nav[role=navigation] li a {
+    nav[role=navigation] li {
       @media #{$bp-sml} {
+				width: 100%;
+				float: none;
+      }
 
+      a {
+	      @media #{$bp-sml} {
+					display: block;
+	      }      	
       }
     }
 
 		// Medium > screens
-    @media only screen and (min-width:768px) {
+    @media #{$bp-sml-up} {
        
 	    a.menu-link {
 	      display: none;
