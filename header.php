@@ -52,7 +52,7 @@
 		</div>
 		<a href="#menu" class="menu-link"><?php _e( 'Menu', 'jux_wp' ); ?> &nbsp; <i class="fa fa-chevron-circle-down"></i></a>
 		<nav id="menu" class="navigation-main" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => '' ) ); ?>
 		</nav> 
 	</header><!-- #masthead -->
 
