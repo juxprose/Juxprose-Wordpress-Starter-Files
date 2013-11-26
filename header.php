@@ -19,6 +19,7 @@
 <!-- IE -->
 <!--[if (lt IE 9) & (!IEMobile)]>
 	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/selectivizr-min.js"></script>
+	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/css3-mediaqueries.js"></script>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
