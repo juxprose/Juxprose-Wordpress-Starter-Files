@@ -63,11 +63,6 @@ Author URI: http://juxprose.com
     font-size: $fnt-giga;
     font-family: $fnt-heading;
     font-weight: normal;
-    color: $pink;
+    color: $clr-primary;
     letter-spacing: 1px;
-
-    @media #{$bp-sml} {
-      font-size: $fnt-giga-smaller;
-      line-height: 1.1;
-    }
   }

@@ -2,7 +2,7 @@
 
 Variables
 
-File: SCSS Partial (/scss/partials/_variables.scss)
+File: SCSS Partial (/scss/generic/_variables.scss)
 Compiled to: css/global.css
 Created: 16/11/2013
 Updated: 
@@ -20,15 +20,15 @@ Author URI: http://juxprose.com
 /* Base
   -------------------------------------------------------- */
 
-	$base-clr: rgb(0,0,0);
-	$base-fnt: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	$base-fnt-size: 16px;
-	$base-line-height: 1.5;   
+  $base-clr: rgb(0,0,0);
+  $base-fnt: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  $base-fnt-size: 16px;
+  $base-line-height: 1.5;   
   $base-num: 1em;
 
 
 /* Colors
-  -------------------------------------------------------- */	
+  -------------------------------------------------------- */ 
 
   $clr-primary: rgb(0,0,0);
   $clr-secondary: rgb(0,0,0);
@@ -53,6 +53,7 @@ Author URI: http://juxprose.com
      @return $target / $context + 0em;
   }
 
+  $fnt-giga: em(56px, 16px);
   $fnt-xlrg: em(36px, 16px);
   $fnt-lrg: em(26px, 16px);
   $fnt-med: em(18px, 16px);
