@@ -22,5 +22,9 @@
 
 <?php wp_footer(); ?>
 
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/assets/js/selectivizr-min.js"></script>
+<![endif]-->  
+
 </body>
 </html>
