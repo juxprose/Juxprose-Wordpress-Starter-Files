@@ -126,3 +126,9 @@ function is_subpage() {
       return false;                          // ... the answer to the question is false
   }
 }
+
+/**
+ * ACF
+ */
+
+include_once('inc/advanced-custom-fields/acf.php');
