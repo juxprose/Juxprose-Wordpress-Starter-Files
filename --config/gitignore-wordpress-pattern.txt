@@ -11,6 +11,11 @@ ehthumbs.db
 *.Trashes
 
 #############################
+# Ignore SASS cache #
+#############################
+*.sass-cache
+
+#############################
 # Ignore everything in the root except the "wp-content" directory.
 #############################
 /*
@@ -28,4 +33,4 @@ wp-content/*
 # specify (see the commented-out example for a hint on how to do this.)
 #############################
 wp-content/themes/*
-# !wp-content/themes/jxp-themename/
+!wp-content/themes/jxp-piccoli/
