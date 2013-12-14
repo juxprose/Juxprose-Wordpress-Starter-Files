@@ -34,15 +34,15 @@ Author URI: http://juxprose.com
 	.menu-inline {
 
 		> li {
-			float: left;
-			margin-right: $base-num;
+			display: inline-block;
+			margin-right: $space;
 
 			&:last-child {
 				margin-right: 0;
-			}			
+			}
 
 			a {
-				@include inline-block;		
+				text-decoration: none;
 			}
 		}
 	}
@@ -51,8 +51,8 @@ Author URI: http://juxprose.com
 
 		> li {
 			border-bottom: 1px solid $base-clr;
-			margin-bottom: $base-num/3;
-			padding-bottom: $base-num/3;
+			margin-bottom: $space/3;
+			padding-bottom: $space/3;
 			position: relative;
 			line-height: 18px;
 		}
@@ -62,18 +62,18 @@ Author URI: http://juxprose.com
 
 		> li {
 			float: left;
-			margin-right: $base-num;
+			margin-right: $space;
 
 			&:last-child {
 				margin-right: 0;
 			}
 	
 			a {
-				@include links-light;
+				@include links-secondary;
 				@include inline-block;
 				@include single-transition(all, 0.2s, ease-in-out);			
 				background: $base-clr;
-				padding: $base-num/2 $base-num;		
+				padding: $space/2 $space;		
 				text-decoration: none;	
 
 				&:hover {
@@ -98,7 +98,7 @@ Author URI: http://juxprose.com
 			background: $base-clr;
 			color: rgb(255,255,255);
 			clear: both;
-			padding: $base-num;
+			padding: $space;
 			text-decoration: none;
 		}
 
