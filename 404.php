@@ -8,14 +8,14 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<main id="main" class="site-main" role="main">
 
-			<article id="post-0" class="post not-found">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'jux_wp' ); ?></h1>
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'jux_wp' ); ?></h1>
 				</header><!-- .entry-header -->
 
-				<div class="entry-content">
+				<div class="page-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'jux_wp' ); ?></p>
 
 					<?php get_search_form(); ?>
@@ -47,10 +47,10 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 .post .not-found -->
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
 
-		</div><!-- #content -->
+		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -24,28 +24,22 @@ get_header(); ?>
 							single_tag_title();
 
 						elseif ( is_author() ) :
-							/* Queue the first post, that way we know
-							 * what author we're dealing with (if that is the case).
-							*/
-							the_post();
-							printf( __( 'Author: %s', 'jux_wp' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
-							/* Since we called the_post() above, we need to
-							 * rewind the loop back to the beginning that way
-							 * we can run the loop properly, in full.
-							 */
-							rewind_posts();
+							printf( __( 'Author: %s', 'jux_wp' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						elseif ( is_day() ) :
 							printf( __( 'Day: %s', 'jux_wp' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'jux_wp' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( __( 'Month: %s', 'jux_wp' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'jux_wp' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'jux_wp' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( __( 'Year: %s', 'jux_wp' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'jux_wp' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 							_e( 'Asides', 'jux_wp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
+							_e( 'Galleries', 'jux_wp');
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
 							_e( 'Images', 'jux_wp');
@@ -58,6 +52,15 @@ get_header(); ?>
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 							_e( 'Links', 'jux_wp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
+							_e( 'Statuses', 'jux_wp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
+							_e( 'Audios', 'jux_wp' );
+
+						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
+							_e( 'Chats', 'jux_wp' );
 
 						else :
 							_e( 'Archives', 'jux_wp' );
@@ -91,11 +94,11 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'no-results', 'archive' ); ?>
+			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
 
-		</div><!-- #content -->
+		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>

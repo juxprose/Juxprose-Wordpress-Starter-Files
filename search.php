@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -23,15 +23,15 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php jux_wp_content_nav( 'nav-below' ); ?>
+			<?php jux_wp_paging_nav(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'no-results', 'search' ); ?>
+			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
 
-		</div><!-- #content -->
+		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>

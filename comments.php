@@ -3,9 +3,7 @@
  * The template for displaying Comments.
  *
  * The area of the page that contains both current comments
- * and the comment form. The actual display of comments is
- * handled by a callback to jux_wp_comment() which is
- * located in the inc/template-tags.php file.
+ * and the comment form.
  *
  * @package Juxprose Wordpress
  */
@@ -41,13 +39,10 @@ if ( post_password_required() )
 
 		<ol class="comment-list">
 			<?php
-				/* Loop through and list the comments. Tell wp_list_comments()
-				 * to use jux_wp_comment() to format the comments.
-				 * If you want to overload this in a child theme then you can
-				 * define jux_wp_comment() and that will be used instead.
-				 * See jux_wp_comment() in inc/template-tags.php for more.
-				 */
-				wp_list_comments( array( 'callback' => 'jux_wp_comment' ) );
+				wp_list_comments( array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				) );
 			?>
 		</ol><!-- .comment-list -->
 

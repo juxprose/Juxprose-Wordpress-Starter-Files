@@ -30,21 +30,6 @@ function jux_wp_body_classes( $classes ) {
 add_filter( 'body_class', 'jux_wp_body_classes' );
 
 /**
- * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
- */
-function jux_wp_enhanced_image_navigation( $url, $id ) {
-	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
-		return $url;
-
-	$image = get_post( $id );
-	if ( ! empty( $image->post_parent ) && $image->post_parent != $id )
-		$url .= '#main';
-
-	return $url;
-}
-add_filter( 'attachment_link', 'jux_wp_enhanced_image_navigation', 10, 2 );
-
-/**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  */
 function jux_wp_wp_title( $title, $sep ) {
@@ -68,3 +53,24 @@ function jux_wp_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'jux_wp_wp_title', 10, 2 );
+
+/**
+ * Sets the authordata global when viewing an author archive.
+ *
+ * This provides backwards compatibility with
+ * http://core.trac.wordpress.org/changeset/25574
+ *
+ * It removes the need to call the_post() and rewind_posts() in an author
+ * template to print information about the author.
+ *
+ * @global WP_Query $wp_query WordPress Query object.
+ * @return void
+ */
+function jux_wp_setup_author() {
+	global $wp_query;
+
+	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+	}
+}
+add_action( 'wp', 'jux_wp_setup_author' );

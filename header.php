@@ -10,21 +10,12 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/assets/img/favicon.png?v=20131809" />
-
-<!-- IE -->
-<!--[if (lt IE 9) & (!IEMobile)]>
-	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/css3-mediaqueries.js"></script>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<!-- Font Awesome -->
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 <!-- GA -->
 <!-- <script>
@@ -38,12 +29,20 @@
 
 </script> -->
 
+<!-- Font Awesome -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 <?php wp_head(); ?>
+
+<!-- IE -->
+<!--[if lt IE 9]>
+<script src="<?php bloginfo( 'template_directory' ); ?>/inc/html5shiv.js"></script>
+<![endif]-->
+
 </head>
 
 <body <?php body_class(); ?>>
-<div class="hfeed site-wrapper">
-	<?php do_action( 'before' ); ?>
+<div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
@@ -51,9 +50,10 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 		<a href="#menu" class="menu-link"><?php _e( 'Menu', 'jux_wp' ); ?> &nbsp; <i class="fa fa-chevron-circle-down"></i></a>
-		<nav id="menu" class="navigation-main" role="navigation">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => '' ) ); ?>
 		</nav> 
 	</header><!-- #masthead -->
 
-	<div id="main" class="site-main">
+	<div id="content" class="site-content">
