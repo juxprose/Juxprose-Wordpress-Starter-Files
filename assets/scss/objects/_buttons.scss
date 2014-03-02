@@ -27,7 +27,7 @@ Author URI: http://juxprose.com
 		background: $clr-secondary;
 		line-height: 1;
 		font-weight: bold;
-		padding: $base-num; 
+		padding: $space; 
 		border: 0;
 		text-align: center;
 		text-decoration: none;
@@ -56,12 +56,12 @@ Author URI: http://juxprose.com
 
 	.btn--small {
 		@extend .btn;
-		padding: $base-num/2;
+		padding: $space/2;
 	}
 
 	.btn--large {
 		@extend .btn;
-		padding: $base-num/2;
+		padding: $space/2;
 		text-transform: uppercase;
 		background: $clr-primary;
 		font-size: 1.4rem;

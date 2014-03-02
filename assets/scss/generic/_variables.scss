@@ -24,20 +24,19 @@ Author URI: http://juxprose.com
   $base-fnt: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   $base-fnt-size: 16px;
   $base-line-height: 1.5;   
-  $base-num: 1em;
+  $space: 1em;
 
 
 /* Colors
+   Sample colors from http://flatuicolors.com/ 
   -------------------------------------------------------- */ 
 
-  $clr-primary: rgb(0,0,0);
-  $clr-secondary: rgb(0,0,0);
-  $clr-tert: rgb(0,0,0);
-  $clr-quad: rgb(0,0,0);
+  $clr-primary: rgb(127, 140, 141); // Concrete #7f8c8d 
+  $clr-secondary: rgb(149, 165, 166); // Asbestos #95a5a6
+  $clr-tert: rgb(189, 195, 199); // Silver #bdc3c7
 
-  $clr-highlight: lighten ($clr-primary, 20%);
-  $clr-keyline: rgb(0,0,0);
-  $clr-bckgrd: rgb(0,0,0);  
+  $clr-keyline: rgb(189, 195, 199); // Silver #bdc3c7
+  $clr-bckgrd: rgb(236, 240, 241); //Clouds #ecf0f1 
 
 
 /* Fonts
@@ -71,12 +70,12 @@ Author URI: http://juxprose.com
 /* Breakpoints
   -------------------------------------------------------- */
 
-  $bp-sml: "only screen and (max-width:320px)";
-  $bp-tab: "only screen and (min-width:321px) and (max-width:1023px)";
+  $bp-sml: "only screen and (max-width:480px)";
+  $bp-tab: "only screen and (min-width:481px) and (max-width:767px)";
   $bp-med: "only screen and (min-width:768px) and (max-width:1023px)";
   $bp-lrg: "only screen and (min-width:1024px)";
 
-  $bp-sml-up: "only screen and (min-width:321px)";
+  $bp-sml-up: "only screen and (min-width:481px)";
 
   //@media #{$small} {
   //  background: red;

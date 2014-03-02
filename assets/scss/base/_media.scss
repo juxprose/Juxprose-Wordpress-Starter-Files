@@ -26,14 +26,14 @@ img, video, object {
 }
 
 iframe {
-	margin-bottom: $base-num;
+	margin-bottom: $space;
 }
 
 figure {
-	margin-bottom: $base-num;
+	margin-bottom: $space;
 	
 	img {
-		margin-bottom: $base-num/4;
+		margin-bottom: $space/4;
 	}
 }
 

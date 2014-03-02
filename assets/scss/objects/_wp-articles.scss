@@ -24,15 +24,15 @@ Author URI: http://juxprose.com
 
 		// Lists
   	ul, ol {
-			margin: 0 $base-num $base-num $base-num;
+			margin: 0 $space $space $space;
 			line-height: 1.3;
 
 			li {
-				margin-bottom: $base-num/2;
+				margin-bottom: $space/2;
 
 				// Nested list
 				ul, ol {
-					margin: $base-num/2 0 0 $base-num;
+					margin: $space/2 0 0 $space;
 				}
 			}
   	}

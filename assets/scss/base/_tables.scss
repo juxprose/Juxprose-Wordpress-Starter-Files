@@ -24,17 +24,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	border: 1px solid $clr-keyline;
-	margin-bottom: $base-num*2;
+	margin-bottom: $space*2;
 }
 
 th {
 	background: $clr-bckgrd;
 	border: 1px solid $clr-keyline;
-	padding: $base-num/2;
+	padding: $space/2;
 	text-align: left;
 }
 
 td {
 	border: 1px solid $clr-keyline;
-	padding: $base-num/2;
+	padding: $space/2;
 }
