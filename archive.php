@@ -90,7 +90,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php jux_wp_content_nav( 'nav-below' ); ?>
+			<?php jux_wp_paging_nav(); ?>
 
 		<?php else : ?>
 

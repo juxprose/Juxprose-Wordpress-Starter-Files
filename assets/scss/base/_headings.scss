@@ -43,16 +43,12 @@ Author URI: http://juxprose.com
     }       
   }
 
-  h3 {
+  h3, h4, h5, h6 {
     font-size: $fnt-med;
 
     @media #{$bp-sml} {
       font-size: $fnt-reg;
     }       
-  }
-
-  h4, h5, h6 {
-    font-size: $fnt-reg;      
   }
 
 

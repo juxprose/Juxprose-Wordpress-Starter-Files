@@ -24,11 +24,11 @@ function jux_wp_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'jux_wp' ) ); ?></div>
+			<div class="nav-previous btn"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'jux_wp' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'jux_wp' ) ); ?></div>
+			<div class="nav-next btn"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'jux_wp' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -56,8 +56,8 @@ function jux_wp_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'jux_wp' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'jux_wp' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'jux_wp' ) );
+				previous_post_link( '<div class="nav-previous btn">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'jux_wp' ) );
+				next_post_link(     '<div class="nav-next btn">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'jux_wp' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

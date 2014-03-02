@@ -21,11 +21,11 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
   // Light Scheme
- 	@mixin links-light {
+ 	@mixin links-primary {
  		@include link-colors(rgb(255,255,255), darken(rgb(255,255,255), 5%), darken(rgb(255,255,255), 5%), rgb(255,255,255), darken(rgb(255,255,255), 5%))
  	}
 
   // Dark Scheme
- 	@mixin links-dark {
+ 	@mixin links-secondary {
  		@include link-colors(rgb(0,0,0), lighten(rgb(0,0,0), 5%), lighten(rgb(0,0,0), 5%), rgb(0,0,0), lighten(rgb(0,0,0), 5%))
  	} 	

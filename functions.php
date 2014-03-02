@@ -96,7 +96,7 @@ function jux_wp_scripts() {
   wp_enqueue_style( 'jux_wp-style' );
 
 	// Global javascript
-  wp_enqueue_script( 'jux_wp-global-js', get_template_directory_uri() . '/assets/js/global.js', array('jquery'), '20120200', true );
+  wp_enqueue_script( 'jux_wp-global-js', get_template_directory_uri() . '/assets/js/global-ck.js', array('jquery'), '20120200', true );
 
 	// Modernizer
 	wp_enqueue_script( 'jux_wp-moderizer', get_template_directory_uri() . '/assets/js/modernizr.js', array(), '20120200', true );

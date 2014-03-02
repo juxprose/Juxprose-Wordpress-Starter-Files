@@ -41,16 +41,11 @@ label {
 }
 
 button, input, select, textarea {
-	color: $clr-primary;
+	border: none;
   font-family: inherit;
   font-size: 100%;
   line-height: normal; 
   margin: 0;
-}
-
-input, textarea {
-	border: none;
-	padding: $space/2;
 }
 
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
@@ -58,9 +53,6 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 }
 
 button, input[type="submit"] {
-	padding: $space/2;
-	background: $clr-bckgrd;
-	border: 1px solid $clr-keyline;
 	cursor: pointer;
   -webkit-appearance: button;
   *overflow: visible;	
@@ -72,13 +64,7 @@ input[type=submit]::-moz-focus-inner {
   padding: 0;
 }
  
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
+
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -102,6 +88,9 @@ input[type="search"]::-webkit-search-decoration {
 	
 	.screen-reader-text {
 		display: none;
+		visibility: hidden;
+
+
 	}
 
 
@@ -109,9 +98,14 @@ input[type="search"]::-webkit-search-decoration {
   -------------------------------------------------------- */
 
 	.field {
-		@include box-shadow(rgb(231,236,233) 1px 1px 10px 5px inset); 
-		@include border-radius(5px);
-		background: $clr-utility;
+		background: $clr-field;
+		border: 1px solid $clr-keyline;
+		padding: $space;
+
+		&:focus {
+  		outline: 0;
+  		border: 1px solid darken($clr-keyline, 25%);
+		}		
 	}
 
 
@@ -125,7 +119,8 @@ input[type="search"]::-webkit-search-decoration {
 		input {
 		  float: left;
 		  overflow: hidden;
-		  width: 100%;			
+		  line-height: 1;
+		  margin-right: $space/2;		
 		}
 
 		button {
