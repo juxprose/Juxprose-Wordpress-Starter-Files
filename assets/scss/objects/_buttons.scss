@@ -51,9 +51,5 @@ Author URI: http://juxprose.com
 
 	.btn--large {
 		@extend .btn;
-		padding: $space/2;
-		text-transform: uppercase;
-		background: $clr-primary;
-		font-size: 1.4rem;
-		font-weight: normal;
+		padding: $space*2;
 	}

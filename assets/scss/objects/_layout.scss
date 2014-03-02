@@ -35,12 +35,27 @@ Author URI: http://juxprose.com
 		@extend .block;
 	}	
 
-	// Site content
-	.block--site-header {
+	// Site strapline
+	.block--site-strapline {
 		@extend .block;
 	}	
+
+	// Site content
+	.block--site-content {
+		@extend .block;
+	}
 
 	// Site footer
 	.block--site-footer {
 		@extend .block;
 	}			
+
+
+/* Modules
+  -------------------------------------------------------- */
+
+  .module {
+  	padding: $space;
+  }
+
+
