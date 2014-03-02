@@ -36,15 +36,16 @@ Author URI: http://juxprose.com
   $clr-tert: rgb(189, 195, 199); // Silver #bdc3c7
 
   $clr-keyline: rgb(189, 195, 199); // Silver #bdc3c7
-  $clr-bckgrd: rgb(236, 240, 241); //Clouds #ecf0f1 
+  $clr-bckgrd: rgb(236, 240, 241); // Clouds #ecf0f1 
+  $clr-utility: rgb(22, 160, 133); // Green Sea #16a085 
 
 
 /* Fonts
   -------------------------------------------------------- */ 
-  
-  // Family
+
   $fnt-secondary: Verdana, Geneva, sans-serif;
   $fnt-heading: HelveticaNeueLT-UltraLight;
+  $fnt-bold: 700;
 
   // Sizes
   @function em($target, $context: $base-fnt-size) {
@@ -70,12 +71,12 @@ Author URI: http://juxprose.com
 /* Breakpoints
   -------------------------------------------------------- */
 
-  $bp-sml: "only screen and (max-width:480px)";
-  $bp-tab: "only screen and (min-width:481px) and (max-width:767px)";
-  $bp-med: "only screen and (min-width:768px) and (max-width:1023px)";
-  $bp-lrg: "only screen and (min-width:1024px)";
+  $bp-sml: "only screen and (max-width: 30em)"; // 480px
+  $bp-tab: "only screen and (min-width: 30.063em) and (max-width: 47.938em)"; // 481px and 767px
+  $bp-med: "only screen and (min-width: 48.000em) and (max-width: 63.938em)"; // 768px and 1023px
+  $bp-lrg: "only screen and (min-width: 64.000em)"; // 1024px
 
-  $bp-sml-up: "only screen and (min-width:481px)";
+  $bp-sml-up: "only screen and (min-width: 30.063em)"; // 481px
 
   //@media #{$small} {
   //  background: red;

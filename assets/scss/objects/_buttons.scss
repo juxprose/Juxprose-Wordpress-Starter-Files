@@ -23,10 +23,11 @@ Author URI: http://juxprose.com
 	.btn {
 		@include border-radius(5px);
 		@include links-light;
+		@include single-transition(all, 0.2s, ease-in-out);
 		display: inline-block;
-		background: $clr-secondary;
+		background: $clr-utility;
 		line-height: 1;
-		font-weight: bold;
+		font-weight: $fnt-bold;
 		padding: $space; 
 		border: 0;
 		text-align: center;
@@ -38,19 +39,8 @@ Author URI: http://juxprose.com
 			text-decoration: none;
 		}
 		
-		&:hover, &:focus{
-			@include single-transition(all, 0.2s, ease-in-out);
-			background: lighten($clr-secondary, 5%);
-			color: rgb(255,255,255);
-		}
-
-		&:visited {
-			color: rgb(255,255,255);
-		}
-
-		&.disabled {
-			background: $clr-primary;
-			color: rgb(255,255,255);
+		&:hover, &:focus {
+			background: lighten($clr-utility, 25%);
 		}
 	}
 

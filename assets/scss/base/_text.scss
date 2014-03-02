@@ -79,12 +79,12 @@ Author URI: http://juxprose.com
   }
 
   acronym {
-    font-weight: bold;
+    font-weight: $fnt-bold;
     font-style: italic;
   }
 
   cite {
-    font-weight: bold;
+    font-weight: $fnt-bold;
   } 
   
   q {
