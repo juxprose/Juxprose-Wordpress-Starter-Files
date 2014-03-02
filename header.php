@@ -15,7 +15,7 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/assets/img/favicon.png?v=20131809" />
+<link rel="icon" type="image/png" href="<?php get_template_directory_uri(); ?>/assets/img/favicon.png?v=20131809" />
 
 <!-- GA -->
 <!-- <script>
@@ -36,7 +36,7 @@
 
 <!-- IE -->
 <!--[if lt IE 9]>
-<script src="<?php bloginfo( 'template_directory' ); ?>/inc/html5shiv.js"></script>
+<script src="<?php get_template_directory_uri(); ?>/inc/html5shiv.js"></script>
 <![endif]-->
 
 </head>

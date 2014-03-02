@@ -15,21 +15,17 @@
 
 				<?php // Page Header
 				// --------------------
-				include('partials/content-page-header.php'); ?>
+				get_template_part( 'partials/header', 'page' ); ?>
 
 				<div class="entry-image">
 
 					<?php // Featured Image
 					// --------------------
-					include('partials/featured-image.php'); ?>
+					get_template_part( 'partials/image', 'featured' ); ?>
 
 				</div>
 
 				<div class="entry-text group">
-
-					<?php // Title & Introduction
-					// ---------------------------
-					include('partials/content-title-intro.php'); ?>
 	
 					<div class="l1-l8 m1-m8 t-all s-all">
 						<?php the_content(); ?>

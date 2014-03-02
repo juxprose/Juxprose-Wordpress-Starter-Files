@@ -47,6 +47,12 @@ function jux_wp_setup() {
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
+	// Setup the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( 'jux_wp_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
+
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
 		'comment-list',
@@ -120,9 +126,22 @@ add_action( 'wp_enqueue_scripts', 'jux_wp_scripts' );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Custom editor styles
+ */
+function my_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
 
 /**
  * Subpage function

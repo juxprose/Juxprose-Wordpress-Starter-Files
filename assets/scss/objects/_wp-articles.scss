@@ -47,19 +47,16 @@ Author URI: http://juxprose.com
 	  } 
   }
 
-
-
-	.entry-summary {
-	}
-
 	.sticky {
-	}
-
-	.hentry { 
+		background: $clr-secondary;
 	}
 
 	.byline {
 		display: none;
+	}
+
+	.bypostauthor {
+		font-weight: $fnt-bold;
 	}
 
 	.single .byline,
