@@ -20,27 +20,26 @@ Author URI: http://juxprose.com
 /* Buttons
   -------------------------------------------------------- */
 
-	.btn {
-		@include border-radius(5px);
-		@include links-light;
-		@include single-transition(all, 0.2s, ease-in-out);
-		display: inline-block;
+	.btn,
+	button,
+	input[type="submit"] {
+		@include links-primary;
 		background: $clr-utility;
 		line-height: 1;
 		font-weight: $fnt-bold;
-		padding: $space; 
+		padding: 1.125em;
 		border: 0;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 
 		a {
-			@include links-light;
+			@include links-primary;
 			text-decoration: none;
 		}
 		
 		&:hover, &:focus {
-			background: lighten($clr-utility, 25%);
+			background: invert($clr-utility);
 		}
 	}
 
