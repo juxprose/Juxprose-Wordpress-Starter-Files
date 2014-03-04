@@ -11,3 +11,6 @@ jQuery('.entry-content blockquote').prepend('<i class="fa fa-quote-left"></i>');
 
 // Fitvids
 jQuery(".entry-content").fitVids();
+
+// Flexslider
+jQuery('.flexslider').flexslider();
