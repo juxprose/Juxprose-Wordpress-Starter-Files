@@ -32,7 +32,13 @@
 <!-- Font Awesome -->
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+<!-- Flexslider CSS 
+<link rel="stylesheet" href="/assets/plugins/flexslider/flexslider.css" type="text/css"> -->
+
 <?php wp_head(); ?>
+
+<!-- Flexslider JS 
+<script src="/assets/plugins/flexslider/jquery.flexslider-min.js"></script> -->
 
 <!-- IE -->
 <!--[if lt IE 9]>
