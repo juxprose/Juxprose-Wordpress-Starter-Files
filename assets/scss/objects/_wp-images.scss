@@ -27,19 +27,23 @@ Author URI: http://juxprose.com
 	margin-top: 0;
 	padding: 0;
 }
+
 .wp-caption {
 	border: 1px solid $clr-keyline;
 	margin-bottom: $space;
 	max-width: 100%;
 }
+
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 1.2% auto 0;
 	max-width: 98%;
 }
+
 .wp-caption-text {
 	text-align: center;
 }
+
 .wp-caption .wp-caption-text {
 	margin: $space 0;
 }
