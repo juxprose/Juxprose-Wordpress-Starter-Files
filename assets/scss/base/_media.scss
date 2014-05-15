@@ -21,6 +21,7 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
 img, video, object {
+	width: inherit;  /* Make images fill their parent's space. Solves IE8. */
 	height: auto;
 	max-width: 100%;
 }
