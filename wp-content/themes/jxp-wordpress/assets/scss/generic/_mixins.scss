@@ -29,3 +29,18 @@ Author URI: http://juxprose.com
  	@mixin links-secondary {
  		@include link-colors(rgb(0,0,0), lighten(rgb(0,0,0), 5%), lighten(rgb(0,0,0), 5%), rgb(0,0,0), lighten(rgb(0,0,0), 5%))
  	} 	
+
+
+/* Buttons
+  -------------------------------------------------------- */ 
+
+  @mixin fnt-btn($weight: 200, $style: normal) {
+  	//font-family: 'Gotham XNarrow SSm A', 'Gotham XNarrow SSm B'; 
+  	font-weight: $weight; 
+  	font-style: $style;
+  	font-size: $fnt-med;
+		letter-spacing: 1px;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;	
+  }

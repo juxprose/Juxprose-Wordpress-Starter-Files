@@ -2,7 +2,7 @@
 /**
  * Template Name: 2-column with sidebar
  *
- * @package Juxprose Lambeth Awards
+ * @package Juxprose Wordpress
  */
 
 get_header(); ?>
