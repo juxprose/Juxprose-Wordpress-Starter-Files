@@ -1,9 +1,9 @@
 {
-  "name": "juxprose-leighton-asia",
+  "name": "juxprose-leighton-asia-pattern-library",
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.5",
     "grunt-contrib-compass": "~0.2.0",
     "grunt-contrib-imagemin": "~0.1.4",
     "grunt-contrib-jshint": "~0.4.3",

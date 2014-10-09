@@ -33,6 +33,9 @@ function jux_wordpress_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	//add_image_size( 'custom-thumb', 540, 540, array( 'center', 'top' ) );
+	//add_image_size( 'custom-large', 1045, 325, true );
+
 	/**
 	 * This theme uses wp_nav_menu() in three locations.
 	 */
@@ -102,16 +105,11 @@ function jux_wordpress_scripts() {
   wp_enqueue_style( 'jux_wordpress-style' );
 
 	// Global javascript
-  wp_enqueue_script( 'jux_wordpress-global-js', get_template_directory_uri() . '/assets/js/global-ck.js', array('jquery'), '20120200', true );
+  wp_enqueue_script( 'jux_wordpress-global-js', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '20120200', true );
 
-	// Modernizer
-	wp_enqueue_script( 'jux_wordpress-moderizer', get_template_directory_uri() . '/assets/js/modernizr.js', array(), '20120200', true );
+	// Global plugins
+  wp_enqueue_script( 'jux_wordpress-plugins-js', get_template_directory_uri() . '/assets/js/plugins.min.js', array('jquery'), '20120200', true );
 
-	// _s Navigation
-	wp_enqueue_script( 'jux_wordpress-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
-
-	// _s Skip link
-	wp_enqueue_script( 'jux_wordpress-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -157,9 +155,3 @@ function is_subpage() {
       return false;                          // ... the answer to the question is false
   }
 }
-
-/**
- * ACF
- */
-
-include_once('inc/advanced-custom-fields/acf.php');

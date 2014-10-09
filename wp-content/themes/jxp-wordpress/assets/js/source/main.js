@@ -7,10 +7,26 @@ jQuery('.entry-content a:not(:has(img))').filter(function() {
 }).addClass("link-external").append( '&nbsp;<i class="fa fa-external-link"></i>');
 
 // Add icon to blockquotes within posts and pages
-jQuery('.entry-content blockquote').prepend('<i class="fa fa-quote-left"></i>');
+jQuery('.pullquote, .pullquote-alt, .rte blockquote').prepend('<i class="fa fa-quote-left"></i>');
+
+
+// Add icon to language selector
+//jQuery('#lang_sel > li').prepend('<i class="fa fa-caret-down"></i>');
+
+
 
 // Fitvids
-jQuery(".entry-content").fitVids();
+//jQuery(".entry-content").fitVids(); 
 
-// Flexslider
-//jQuery('.flexslider').flexslider();
+// Responsive menu
+jQuery(document).ready(function($) {
+  $('body').addClass('js');
+  var $menu = $('#site-navigation'),
+  $menulink = $('.menu-link');
+  
+	$menulink.click(function() {
+  	$menulink.toggleClass('active');
+  	$menu.toggleClass('active');
+  	return false;
+	});
+}); 

@@ -56,7 +56,8 @@ module.exports = function(grunt) {
                     'assets/js/plugins.min.js': [
                         'assets/js/source/plugins.js',
                         'assets/js/vendor/**/*.js',
-                        '!assets/js/vendor/modernizr*.js'
+                        '!assets/js/vendor/modernizr*.js',
+                        '!assets/js/vendor/css3-mediaqueries*.js'
                     ],
                     'assets/js/main.min.js': [
                         'assets/js/source/main.js'
@@ -69,14 +70,14 @@ module.exports = function(grunt) {
         imagemin: {
             dist: {
                 options: {
-                    optimizationLevel: 7,
+                    optimizationLevel: 10,
                     progressive: true
                 },
                 files: [{
                     expand: true,
                     cwd: 'assets/img/',
                     src: '**/*',
-                    dest: 'assets/img/'
+                    dest: 'assets/img/optimised/'
                 }]
             }
         }

@@ -10,12 +10,32 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="icon" type="image/png" href="<?php get_template_directory_uri(); ?>/assets/img/favicon.png?v=20131809" />
+<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png?v=20131809" />
+
+<!-- Font Awesome -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<!-- Gridset CSS -->
+<!--[if (!IE) | (gt IE 9)]><!--><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/gridset.css" /><!--<![endif]-->
+<!--[if IE 9]><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/gridset-ie-9.css" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/gridset-ie-lte8.css" /><![endif]--> 
+
+<!-- Flexslider --> 
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/plugins/flexslider/flexslider.css" type="text/css">          
+
+<!-- Selectivizr / Respond JS -->
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="<?php echo get_template_directory_uri(); ?>/bower_components/respond/dest/respond.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/bower_components/selectivizr/selectivizr.js"></script>
+<![endif]-->
+
+<!-- Modernizer -->
+<script src="<?php echo get_template_directory_uri(); ?>/bower_components/modernizr/modernizr.js"></script>
 
 <!-- GA -->
 <!-- <script>
@@ -29,21 +49,22 @@
 
 </script> -->
 
-<!-- Font Awesome -->
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-<!-- Flexslider CSS 
-<link rel="stylesheet" href="/assets/plugins/flexslider/flexslider.css" type="text/css"> -->
-
 <?php wp_head(); ?>
 
-<!-- Flexslider JS 
-<script src="/assets/plugins/flexslider/jquery.flexslider-min.js"></script> -->
+<!-- Flexslider -->
+<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/flexslider/jquery.flexslider.js"></script>
 
-<!-- IE -->
-<!--[if lt IE 9]>
-<script src="<?php get_template_directory_uri(); ?>/inc/html5shiv.js"></script>
-<![endif]-->
+<!-- Flexslider -->
+<script type="text/javascript" charset="utf-8">
+  jQuery(window).load(function() {
+    jQuery('.flexslider').flexslider({
+      animation: "slide",
+      controlNav: false,
+      slideshowSpeed: 3000,
+      useCSS: false,
+    });
+  });
+</script>  
 
 </head>
 

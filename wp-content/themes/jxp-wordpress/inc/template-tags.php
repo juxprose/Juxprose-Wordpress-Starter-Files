@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package jux_wp
+ * @package Juxprose Wordpress
  */
 
 if ( ! function_exists( 'jux_wordpress_paging_nav' ) ) :

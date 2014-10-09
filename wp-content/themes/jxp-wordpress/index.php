@@ -18,11 +18,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				
-
-				</div>
 
 				<?php
 					/* Include the Post-Format-specific template for the content.
