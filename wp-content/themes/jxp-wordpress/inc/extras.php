@@ -10,16 +10,16 @@
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function jux_wp_page_menu_args( $args ) {
+function jux_wordpress_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'jux_wp_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'jux_wordpress_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
  */
-function jux_wp_body_classes( $classes ) {
+function jux_wordpress_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -27,12 +27,12 @@ function jux_wp_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'jux_wp_body_classes' );
+add_filter( 'body_class', 'jux_wordpress_body_classes' );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  */
-function jux_wp_wp_title( $title, $sep ) {
+function jux_wordpress_wp_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() )
@@ -48,11 +48,11 @@ function jux_wp_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'jux_wp' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'jux_wordpress' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'jux_wp_wp_title', 10, 2 );
+add_filter( 'wp_title', 'jux_wordpress_wp_title', 10, 2 );
 
 /**
  * Sets the authordata global when viewing an author archive.
@@ -66,11 +66,11 @@ add_filter( 'wp_title', 'jux_wp_wp_title', 10, 2 );
  * @global WP_Query $wp_query WordPress Query object.
  * @return void
  */
-function jux_wp_setup_author() {
+function jux_wordpress_setup_author() {
 	global $wp_query;
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
 	}
 }
-add_action( 'wp', 'jux_wp_setup_author' );
+add_action( 'wp', 'jux_wordpress_setup_author' );

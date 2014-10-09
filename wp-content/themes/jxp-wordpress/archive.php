@@ -24,46 +24,46 @@ get_header(); ?>
 							single_tag_title();
 
 						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'jux_wp' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'jux_wordpress' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'jux_wp' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day: %s', 'jux_wordpress' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'jux_wp' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'jux_wp' ) ) . '</span>' );
+							printf( __( 'Month: %s', 'jux_wordpress' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'jux_wordpress' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'jux_wp' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'jux_wp' ) ) . '</span>' );
+							printf( __( 'Year: %s', 'jux_wordpress' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'jux_wordpress' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'jux_wp' );
+							_e( 'Asides', 'jux_wordpress' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'jux_wp');
+							_e( 'Galleries', 'jux_wordpress');
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'jux_wp');
+							_e( 'Images', 'jux_wordpress');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'jux_wp' );
+							_e( 'Videos', 'jux_wordpress' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'jux_wp' );
+							_e( 'Quotes', 'jux_wordpress' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'jux_wp' );
+							_e( 'Links', 'jux_wordpress' );
 
 						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'jux_wp' );
+							_e( 'Statuses', 'jux_wordpress' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'jux_wp' );
+							_e( 'Audios', 'jux_wordpress' );
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'jux_wp' );
+							_e( 'Chats', 'jux_wordpress' );
 
 						else :
-							_e( 'Archives', 'jux_wp' );
+							_e( 'Archives', 'jux_wordpress' );
 
 						endif;
 					?>
@@ -90,7 +90,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php jux_wp_paging_nav(); ?>
+			<?php jux_wordpress_paging_nav(); ?>
 
 		<?php else : ?>
 

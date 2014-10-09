@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in tmpl-2-col-sidebar.php
  *
- * @package Juxprose Lambeth Awards
+ * @package Juxprose Wordpress
  */
 ?>
 
@@ -42,12 +42,12 @@
 
 				<?php
 					wp_link_pages( array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'jux_wp' ),
+						'before' => '<div class="page-links">' . __( 'Pages:', 'jux_wordpress' ),
 						'after'  => '</div>',
 					) );
 				?>
 			</div><!-- .entry-content -->
-			<?php edit_post_link( __( 'Edit', 'jux_wp' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'jux_wordpress' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 		</article><!-- #post-## -->
 	</div>
 </div>

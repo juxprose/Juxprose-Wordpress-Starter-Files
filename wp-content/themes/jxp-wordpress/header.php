@@ -55,9 +55,9 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
-		<a href="#menu" class="menu-link"><?php _e( 'Menu', 'jux_wp' ); ?> &nbsp; <i class="fa fa-chevron-circle-down"></i></a>
+		<a href="#menu" class="menu-link"><?php _e( 'Menu', 'jux_wordpress' ); ?> &nbsp; <i class="fa fa-chevron-circle-down"></i></a>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'jxp-leighton-asia' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'menu_class' => '' ) ); ?>
 		</nav> 
 	</header><!-- #masthead -->

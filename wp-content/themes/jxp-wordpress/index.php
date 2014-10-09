@@ -34,7 +34,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php jux_wp_paging_nav(); ?>
+			<?php jux_wordpress_paging_nav(); ?>
 
 		<?php else : ?>
 
