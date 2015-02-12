@@ -8,14 +8,15 @@
  */
 ?>
 
-	</div><!-- #main -->
+	</main><!-- main -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer class="site-footer" role="contentinfo">
 		<div class="site-info">
 			&copy; <?php echo date("Y") ?>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	</footer><!-- .site-footer -->
+
+</div><!-- .wrapper -->
 
 <?php wp_footer(); ?>
 
