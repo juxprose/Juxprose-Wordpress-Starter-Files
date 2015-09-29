@@ -115,16 +115,16 @@ function jux_wordpress_scripts() {
   wp_enqueue_style( 'jux_wordpress-style' );
 
   // Match Height
-  wp_enqueue_script( 'jux_wordpress_matchHeight', get_template_directory_uri() . '/bower_components/matchHeight/jquery.matchHeight.js', array('jquery'), '20120200', true );
+  wp_enqueue_script( 'jux_wordpress-matchHeight', get_template_directory_uri() . '/bower_components/matchHeight/jquery.matchHeight.js', array('jquery'), '20120200', true );
 
 	// FitVids
-  wp_enqueue_script( 'jux_wordpress_fitvids', get_template_directory_uri() . '/bower_components/FitVids/jquery.fitvids.js', array('jquery'), '20120200', true );
+  wp_enqueue_script( 'jux_wordpress-fitvids', get_template_directory_uri() . '/bower_components/FitVids/jquery.fitvids.js', array('jquery'), '20120200', true );
 
 	// FitText
-  wp_enqueue_script( 'jux_wordpress_fittext', get_template_directory_uri() . '/bower_components/FitText.js/jquery.fittext.js', array('jquery'), '20120200', true );
+  wp_enqueue_script( 'jux_wordpress-fittext', get_template_directory_uri() . '/bower_components/FitText.js/jquery.fittext.js', array('jquery'), '20120200', true );
 
 	// Picturefill
-  wp_enqueue_script( 'jux_wordpress_picturefill', get_template_directory_uri() . '/bower_components/picturefill/dist/picturefill.min.js', array('jquery'), '20120200', true );
+  wp_enqueue_script( 'jux_wordpress-picturefill', get_template_directory_uri() . '/bower_components/picturefill/dist/picturefill.min.js', array('jquery'), '20120200', true );
 
   // Modernizer
   wp_enqueue_script( 'jux_wordpress-modernizer-js', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array('jquery'), '20120200', true );
@@ -141,22 +141,9 @@ add_action( 'wp_enqueue_scripts', 'jux_wordpress_scripts' );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Custom editor styles
- */
-function my_theme_add_editor_styles() {
-    add_editor_style( 'custom-editor-style.css' );
-}
-add_action( 'init', 'my_theme_add_editor_styles' );
 
 /**
  * Subpage function
