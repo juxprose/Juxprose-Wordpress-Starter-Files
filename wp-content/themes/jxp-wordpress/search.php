@@ -19,7 +19,7 @@ get_header(); ?>
 
 	<?php endwhile; ?>
 
-	<?php jux_wordpress_paging_nav(); ?>
+	<?php the_posts_navigation(); ?>
 
 <?php else : ?>
 

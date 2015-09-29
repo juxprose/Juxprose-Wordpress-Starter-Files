@@ -117,7 +117,7 @@ function jux_wordpress_entry_footer() {
 		}
 	}
 
-	if ( ! isjux_wordpressingle() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link( __( 'Leave a comment', 'jux_wordpress' ), __( '1 Comment', 'jux_wordpress' ), __( '% Comments', 'jux_wordpress' ) );
 		echo '</span>';
