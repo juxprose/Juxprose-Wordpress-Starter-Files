@@ -44,3 +44,14 @@ Author URI: http://juxprose.com
 		text-transform: uppercase;
 		text-decoration: none;	
   }
+
+/* Vertical Algin
+  -------------------------------------------------------- */ 
+
+  @mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }  
