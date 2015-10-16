@@ -16,40 +16,45 @@ Author URI: http://juxprose.com
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
+// Base
 
-/* Buttons
-  -------------------------------------------------------- */
+%btn {
+	display: inline-block;
+	padding: $space;
+	color: #fff;
+	font-weight: $fnt-bold;
+	text-transform: uppercase;
+}
 
-	.btn,
-	button,
-	input[type="submit"] {
-		@include links-dark;
-		@include inline-block;
-		background: $clr-utility;
-		line-height: 1;
-		font-weight: $fnt-bold;
-		padding: 1.125em;
-		border: 0;
-		text-align: center;
-		text-decoration: none;
-		text-transform: uppercase;
+// Mixin
 
-		a {
-			@include links-dark;
-			text-decoration: none;
-		}
-		
-		&:hover, &:focus {
-			background: invert($clr-utility);
-		}
+@mixin btn-theme($btn-color) {
+
+	@extend %btn;
+	background-color: $btn-color;
+
+	&:hover,
+	&:active {
+		background-color: darken($btn-color, 10%);
 	}
+}
 
-	.btn--small {
-		@extend .btn;
-		padding: $space/2;
-	}
+// Colors
 
-	.btn--large {
-		@extend .btn;
-		padding: $space*2;
-	}
+%primary {
+	@include btn-theme($clr-primary);
+}
+
+%secondary {
+	@include btn-theme($clr-secondary);
+}
+
+// Buttons
+
+.btn {
+	@extend %primary;
+}
+
+.submit {
+	@extend %secondary
+}
