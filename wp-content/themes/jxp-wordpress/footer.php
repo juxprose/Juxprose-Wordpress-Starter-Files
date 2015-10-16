@@ -8,15 +8,17 @@
  */
 ?>
 
-	</main><!-- main -->
+	</main>
 
 	<footer class="site-footer" role="contentinfo">
-		<div class="site-info">
-			&copy; <?php echo date("Y") ?>
-		</div><!-- .site-info -->
-	</footer><!-- .site-footer -->
+	  <div class="content-wrapper">
+	    <div class="content">
+				&copy; <?php echo date("Y") ?>
+      </div>
+		</div>
+	</footer>
 
-</div><!-- .wrapper -->
+</div>
 
 <?php wp_footer(); ?>
 

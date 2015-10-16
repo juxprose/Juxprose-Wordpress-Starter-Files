@@ -12,7 +12,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<div class="content-wrapper">
+	<div class="content">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -28,6 +29,7 @@ get_header(); ?>
 		<?php endwhile; ?>
 
 	</div>
+</div>
 
 <?php get_sidebar(); ?>
 
