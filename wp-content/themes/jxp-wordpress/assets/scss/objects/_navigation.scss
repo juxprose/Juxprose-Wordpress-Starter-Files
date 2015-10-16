@@ -81,68 +81,110 @@ Author URI: http://juxprose.com
 					background-color: lighten($base-clr, 20%);
 				}
 			}
-
-	  	// Wordpress on-states
-	  	&.current-menu-item, &.current_page_item, &.current-page-ancestor, &.current-post-ancestor, &.current-menu-parent &.current-post-parent {
-				background-color: lighten($base-clr, 20%);
-			}
-
 		}											
 	}
 
-  /* Responsive site menu
-  -------------------------------------------------------- */
+  .main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
 
-		// Toggle - all
-		a.menu-link {
-			@include inline-block;
-			background: $base-clr;
-			color: rgb(255,255,255);
-			clear: both;
-			padding: $space;
-			text-decoration: none;
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 1.5em;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
 		}
 
-		// Main nav - all
-    nav[role=navigation] {
-      clear: both;
-      -webkit-transition: all 0.3s ease-out;  
-      -moz-transition: all 0.3s ease-out;
-      -ms-transition: all 0.3s ease-out;
-      -o-transition: all 0.3s ease-out;
-      transition: all 0.3s ease-out;
-    }
-
-		.js nav[role=navigation] {
-			overflow: hidden;
-			max-height: 0;
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
 		}
+	}
+	li {
+		float: left;
+		position: relative;
 
-    nav[role=navigation].active {
-      max-height: 20em;
-    }
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+	}
 
-    nav[role=navigation] li {
-      @media #{$bp-sml} {
-				width: 100%;
-				float: none;
-      }
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+	}
+}
 
-      a {
-	      @media #{$bp-sml} {
-					display: block;
-	      }      	
-      }
-    }
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
 
-		// Medium > screens
-    @media #{$bp-sml-up} {
-       
-	    a.menu-link {
-	      display: none;
-	    }
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
 
-	    .js nav[role=navigation] {
-	      max-height: none;
-	    }
-    }	
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
