@@ -1,11 +1,23 @@
-# Juxprose-Wordpress-Starter-Files
+Juxprose-Wordpress-Starter-Files
+---------------------------------
 
-- Wordpress starter theme. Based on _s. Configured for SASS / Compass. Includes Font Awesome CDN link. 
+- Wordpress starter theme. Based on _s.
 
-- You will need to follow the Readme here to update the naming convention: https://github.com/automattic/_s, the theme name in that example is _s, my theme name is jux_wp.
+Getting Started
+---------------
 
-## Dependencies
+1. Search for `'jux_wordpress'` (inside single quotations) to capture the text domain.
+2. Search for `jux_wordpress` to capture all the function names.
+3. Search for `Text Domain: jux_wordpress` in style.css.
+4. Search for <code>&nbsp;jux_wordpress</code> (with a space before it) to capture DocBlocks.
+5. Search for `jux_wordpress-` to capture prefixed handles.
 
-- Advanced Custom Fields Wordpress plugin
+OR
 
-http://www.advancedcustomfields.com/
+* Search for: `'jux_wordpress'` and replace with: `'megatherium'`
+* Search for: `_s_` and replace with: `megatherium_`
+* Search for: `Text Domain: jux_wordpress` and replace with: `Text Domain: megatherium` in style.css.
+* Search for: <code>&nbsp;jux_wordpress</code> and replace with: <code>&nbsp;Megatherium</code>
+* Search for: `jux_wordpress-` and replace with: `megatherium-`
+
+Then, update the stylesheet header in `style.css`
