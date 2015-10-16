@@ -60,12 +60,6 @@ function jux_wordpress_setup() {
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'jux_wordpress_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
 		'comment-list',
@@ -75,6 +69,7 @@ function jux_wordpress_setup() {
 	) );
 }
 endif; // jux_wordpress_setup
+
 add_action( 'after_setup_theme', 'jux_wordpress_setup' );
 
 /**
@@ -92,16 +87,6 @@ function jux_wordpress_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-
-// Footer
-register_sidebar( array(
-	'name'          => __( 'Footer Primary', 'positive_wp' ),
-	'id'            => 'footer-1',
-	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</aside>',
-	'before_title'  => '<h2 class="widget-title">',
-	'after_title'   => '</h2>',
-) );
 
 add_action( 'widgets_init', 'jux_wordpress_widgets_init' );
 
@@ -144,21 +129,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Subpage function
- */
-
-function is_subpage() {
-  global $post;                              // load details about this page
-
-  if ( is_page() && $post->post_parent ) {   // test to see if the page has a parent
-      return $post->post_parent;             // return the ID of the parent post
-
-  } else {                                   // there is no parent so ...
-      return false;                          // ... the answer to the question is false
-  }
-}
 
 // Move Yoast to bottom
 function yoasttobottom() {

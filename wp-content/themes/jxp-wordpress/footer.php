@@ -22,7 +22,7 @@
 
 <!-- Older IE polyfills -->
 <!--[if IE 8]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
 <![endif]-->
 
 </body>
