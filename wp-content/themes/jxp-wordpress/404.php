@@ -9,11 +9,11 @@ get_header(); ?>
 
 	<section class="error-404 not-found">
 		<header class="page-header">
-			<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'jux_wordpress' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'That page can&rsquo;t be found.', 'jux_wordpress' ); ?></h1>
 		</header><!-- .entry-header -->
 
 		<div class="page-content">
-			<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'jux_wordpress' ); ?></p>
+			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'jux_wordpress' ); ?></p>
 
 			<?php get_search_form(); ?>
 
