@@ -7,25 +7,36 @@
 
 get_header(); ?>
 
-<?php if ( have_posts() ) : ?>
+	<section id="primary" class="content-area">
 
-	<header class="page-header">
-		<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'jux_wordpress' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-	</header><!-- .page-header -->
+		<?php if ( have_posts() ) : ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'jux_wordpress' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header><!-- .page-header -->
 
-		<?php get_template_part( 'content', 'search' ); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php endwhile; ?>
+				<?php
+				/**
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'partials/content', 'search' );
+				?>
 
-	<?php the_posts_navigation(); ?>
+			<?php endwhile; ?>
 
-<?php else : ?>
+			<?php the_posts_navigation(); ?>
 
-	<?php get_template_part( 'content', 'none' ); ?>
+		<?php else : ?>
 
-<?php endif; ?>
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+		<?php endif; ?>
+
+	</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
