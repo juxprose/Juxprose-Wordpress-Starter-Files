@@ -72,7 +72,8 @@ a, a:link, a:visited, a:active, a:hover {
     margin: 5px 20px 5px 0;
 }
 
-.test-remove {
+.btn-remove,
+.btn-hidden {
     margin: -8px 20px 0 20px;
     line-height: 1;
     border: 0;
@@ -84,7 +85,8 @@ a, a:link, a:visited, a:active, a:hover {
 /* test items */
 
 .items-container,
-.data-test-items {
+.data-test-items,
+.target-items {
     overflow: hidden;
     margin: 0 -1%;
 }
@@ -220,6 +222,12 @@ a, a:link, a:visited, a:active, a:hover {
     height: 250px;
 }
 
+/* test target */
+
+.target-items .item {
+    overflow-y: auto;
+}
+
 /* test responsive */
 
 @media only screen and (max-width: 1024px) {
@@ -236,4 +244,37 @@ a, a:link, a:visited, a:active, a:hover {
         margin-left: 0;
         margin-right: 0;
     }
+}
+
+/* test hidden */
+
+.test-hidden .hidden-items > .item-0,
+.test-hidden .hidden-items > .item-2 {
+    display: none;
+}
+
+.test-hidden .hidden-items > .item-1,
+.test-hidden .hidden-items > .item-3 {
+    visibility: hidden;
+}
+
+.test-hidden .hidden-items .items-container {
+    display: none;
+}
+
+.hidden-items .items-container .item {
+    width: 48%;
+}
+
+/* test inline-block */
+
+.inline-block-items {
+    text-align: center;
+}
+
+.inline-block-items .item {
+    display: inline-block;
+    vertical-align: top;
+    /*width: 20%;*/
+    float: none;
 }
