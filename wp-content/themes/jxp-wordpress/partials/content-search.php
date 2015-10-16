@@ -1,5 +1,9 @@
 <?php
 /**
+ * Template part for displaying results in search pages.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
  * @package Juxprose Wordpress
  */
 ?>
@@ -15,21 +19,8 @@
 		<?php endif; ?>
 	</header>
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'jux_wordpress' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
-
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jux_wordpress' ),
-				'after'  => '</div>',
-			) );
-		?>
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
 	</div>
 
 	<footer class="entry-footer">
