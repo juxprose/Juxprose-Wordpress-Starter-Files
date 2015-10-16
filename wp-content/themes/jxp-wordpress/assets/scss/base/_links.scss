@@ -4,7 +4,7 @@ Typography
 
 File: SCSS Partial (/scss/partials/_typography.scss)
 Compiled to: css/global.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -22,7 +22,7 @@ Author URI: http://juxprose.com
   -------------------------------------------------------- */
 
 a {
-	@include links-secondary;
+	@include links-dark;
 	@include single-transition(color, 0.2s, ease-in-out, 0s);
 }
 
@@ -34,13 +34,4 @@ a {
 		a {
 			text-decoration: none;
 		}
-	}
-
-
-/* External links
-  -------------------------------------------------------- */
-
-	.fa-external-link {
-		font-size: 80%;
-		text-decoration: underline;
 	}

@@ -4,7 +4,7 @@ Lists
 
 File: SCSS Partial (/scss/base/_lists.scss)
 Compiled to: css/global.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -17,28 +17,14 @@ Author URI: http://juxprose.com
 */
 
 
-/* Primary lists
+/* Unordered + ordered lists
   -------------------------------------------------------- */
 
-  // Base
 	ol, ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
-
-  // Post lists
-  .entry-text {
-    ol, ul {
-      margin-left: $space*1.5;
-    }
-    ol li {
-      list-style-type: decimal;
-    }
-    ul li {
-      list-style-type: square;
-    }
-  }
 
 
 /* Definition lists

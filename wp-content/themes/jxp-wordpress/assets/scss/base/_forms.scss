@@ -4,7 +4,7 @@ Forms
 
 File: SCSS Partial (/scss/base/_forms.scss)
 Compiled to: css/style.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -17,46 +17,9 @@ Author URI: http://juxprose.com
 */
 
 
-/* Base
+
+/* Resets
   -------------------------------------------------------- */
-
-form > div {
-	margin-bottom: $space;
-}
-
-form ol, form ul {
-	list-style: none;
-	margin-left: 0;
-}
-
-fieldset {
-	border: 0;
-	padding: 0;
-	margin: 0;
-}
-
-legend {
-	margin-bottom: $space/2;
-	font-size: $fnt-med;
-}
-
-label {
-	display: block;
-	padding-bottom: $space/4;
-}
-
-button, input, select, textarea {
-	@include box-sizing(border-box);
-	color: $base-clr;
-  font-family: inherit;
-  font-size: 100%;
-  line-height: normal; 
-  margin: 0 0 $space 0;
-}
-
-input, textarea {
-	border: none;
-}
 
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
 	-webkit-appearance: none;
@@ -86,86 +49,38 @@ select:focus {
 }
 
 
-/* Screen readers
-  -------------------------------------------------------- */
-	
-	.screen-reader-text {
-		display: none;
-	}
-
-
-/* Fields
+/* Base
   -------------------------------------------------------- */
 
-	.field {
-		@include single-transition(all, 0.2s, ease-in-out);
-		border: 1px solid $clr-keyline;
-		padding: $space/2;
-		margin-bottom: $space;
-		width: 100%;
-		
-		&:hover, &:focus {
-			border: 1px solid darken($clr-keyline, 25%)
-		}
-	}
+form {
 
-
-/* Search forms - custom search button using Font Awesome
-  -------------------------------------------------------- */
-	
-	.search-form {
-
-		input {
-			@include box-sizing(border-box);
-		  overflow: hidden;		
-		}
-
-		button {
-			background: none;
-		  padding: 0;
-		  margin: 0;
-		  border: none;
-		  cursor: pointer;
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 1;
-			width: auto;
-		  
-
-			&:before {
-  			content: "\f002";
-  			color: $base-clr;
-  			font-family: 'FontAwesome';
-  			font-size: 18px;
-  		}		  	
-		}
-	}
-
-
-/* Checkboxes / Radio Buttons
-  -------------------------------------------------------- */
-
-	.options {
-		margin-left: 2px;
-	}
-
-	.list-options {
+	ol, ul {
 		list-style: none;
-		margin: 0;
-		padding: 0;
-		vertical-align: bottom;
-
-		input[type="checkbox"],
-		input[type="radio"] {
-	    width: auto;
-	    margin: 0 $space/3 0 0;
-		}
-
-		label {
-			margin: 0 0 $space 0;
-			padding: 0;
-			line-height: 13px;
-			vertical-align: bottom;
-		}
+		margin-left: 0;
 	}
+
+	button, input, select, textarea {
+		border: none;
+		color: $base-clr;
+	  font-family: inherit;
+	  font-size: 100%;
+	  line-height: normal; 
+	  margin: 0 0 $space 0;
+	}	
+
+	fieldset {
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+
+	legend {
+		margin-bottom: $space/2;
+		font-size: $fnt-med;
+	}
+
+	label {
+		display: block;
+		padding-bottom: $space/4;
+	}	
+}

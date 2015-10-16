@@ -4,7 +4,7 @@ Mixins
 
 File: SCSS Partial (/scss/partials/_mixins.scss)
 Compiled to: css/global.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -17,33 +17,29 @@ Author URI: http://juxprose.com
 */
 
 
+/* Fonts
+  -------------------------------------------------------- */
+
+  // http://w3bits.com/rem-fallback/
+  // @include font-size(12);
+
+  @mixin font-size($size, $base: $base-fnt-size) {
+    font-size: $size; // fallback for old browsers
+    font-size: ($size / $base) * 1rem;
+  }
+
+
 /* Links
   -------------------------------------------------------- */
 
-  // Light Scheme
- 	@mixin links-primary {
+ 	@mixin links-light {
  		@include link-colors(rgb(255,255,255), darken(rgb(255,255,255), 5%), darken(rgb(255,255,255), 5%), rgb(255,255,255), darken(rgb(255,255,255), 5%))
  	}
 
-  // Dark Scheme
- 	@mixin links-secondary {
+ 	@mixin links-dark {
  		@include link-colors(rgb(0,0,0), lighten(rgb(0,0,0), 5%), lighten(rgb(0,0,0), 5%), rgb(0,0,0), lighten(rgb(0,0,0), 5%))
  	} 	
 
-
-/* Buttons
-  -------------------------------------------------------- */ 
-
-  @mixin fnt-btn($weight: 200, $style: normal) {
-  	//font-family: 'Gotham XNarrow SSm A', 'Gotham XNarrow SSm B'; 
-  	font-weight: $weight; 
-  	font-style: $style;
-  	font-size: $fnt-med;
-		letter-spacing: 1px;
-		text-align: center;
-		text-transform: uppercase;
-		text-decoration: none;	
-  }
 
 /* Vertical Algin
   -------------------------------------------------------- */ 

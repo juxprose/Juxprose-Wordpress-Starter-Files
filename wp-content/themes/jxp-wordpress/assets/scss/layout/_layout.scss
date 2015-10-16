@@ -1,15 +1,15 @@
 /*==============================================================
 
-Wordpress > Widgets
+Layout
 
-File: SCSS Partial (/scss/objects/_wp-widgets.scss)
+File: SCSS Partial (/scss/objects/_layout.scss)
 Compiled to: css/global.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Description: Specific to Wordpress
+Description: Layout blocks
 Author: David Flindall
 Author URI: http://juxprose.com
 
@@ -17,17 +17,3 @@ Author URI: http://juxprose.com
 */
 
 
-/* Widgets
-  -------------------------------------------------------- */
-
-.widget {
-
-	select {
-		max-width: 100%;
-	}
-
-}
-
-.widget_search .submit {
-	display: none;
-}

@@ -4,7 +4,7 @@ Navigation
 
 File: SCSS Partial (/scss/partials/_navigation.scss)
 Compiled to: css/global.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -42,7 +42,7 @@ Author URI: http://juxprose.com
 			}
 
 			a {
-				@include links-secondary;
+				@include links-light;
 				text-decoration: none;
 			}
 		}
@@ -70,7 +70,7 @@ Author URI: http://juxprose.com
 			}
 	
 			a {
-				@include links-secondary;
+				@include links-light;
 				@include inline-block;
 				@include single-transition(all, 0.2s, ease-in-out);			
 				background: $base-clr;

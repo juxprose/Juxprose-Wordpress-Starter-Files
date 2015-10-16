@@ -4,7 +4,7 @@ Main
 
 File: SCSS Partial (/scss/partials/_main.scss)
 Compiled to: css/global.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -32,5 +32,13 @@ Author URI: http://juxprose.com
 
     *, *:before, *:after {
       box-sizing: inherit;
-    }       
+    }    
   }  
+
+
+  /* Accessability
+  -------------------------------------------------------- */
+
+  .screen-reader-text {
+    display: none;
+  }

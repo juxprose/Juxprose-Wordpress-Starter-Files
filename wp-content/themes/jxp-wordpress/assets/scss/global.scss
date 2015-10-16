@@ -4,7 +4,7 @@ Global
 
 File: SCSS Partial (/scss/global.scss)
 Compiled to: css/global.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -26,37 +26,44 @@ Author URI: http://juxprose.com
 @import "compass/utilities";
 
 
-/*  Generic
+/*  Utilities
   -------------------------------------------------------- */
 
-@import "generic/variables";
-@import "generic/mixins";
-@import "generic/normalize"; 
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/helpers";
+@import "utilities/effects";
 
 
 /*  Base
   -------------------------------------------------------- */
 
+@import "base/normalize";  
 @import "base/main";
-@import "base/global-classes";
-@import "base/interaction";
 @import "base/lists";
 @import "base/links";
 @import "base/forms";
 @import "base/media";
 @import "base/tables";
 @import "base/text";
-@import "base/headings";
 @import "base/print";
 
 
-/*  Objects
+/*  Layout
   -------------------------------------------------------- */
 
-@import "objects/branding";
-@import "objects/navigation";
-@import "objects/buttons";
-@import "objects/layout";
-@import "objects/wp-articles";
-@import "objects/wp-images";
-@import "objects/wp-widgets";
+@import "layout/layout";
+@import "layout/navigation";
+
+
+/*  Components
+  -------------------------------------------------------- */
+
+@import "components/buttons";
+
+
+/*  Wordpress
+  -------------------------------------------------------- */
+
+@import "wordpress/wp-articles";
+@import "wordpress/wp-images";

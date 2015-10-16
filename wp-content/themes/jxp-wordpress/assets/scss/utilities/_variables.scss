@@ -4,7 +4,7 @@ Variables
 
 File: SCSS Partial (/scss/generic/_variables.scss)
 Compiled to: css/global.css
-Created: 16/11/2013
+Created: 16/10/2015
 Updated: 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -26,7 +26,7 @@ Author URI: http://juxprose.com
   $base-fnt-weight: 300; 
   $base-fnt-style: normal;    
   $base-line-height: 1.5; 
-  $space: 1em;
+  $space: 1em; 
 
 
 /* Colors
@@ -53,41 +53,27 @@ Author URI: http://juxprose.com
 /* Fonts
   -------------------------------------------------------- */ 
 
-  $fnt-secondary: Verdana, Geneva, sans-serif;
-  $fnt-heading: HelveticaNeueLT-UltraLight;
+  // Weights
   $fnt-bold: 700;
 
   // Sizes
-  @function em($target, $context: $base-fnt-size) {
-     @if $target == 0 { @return 0 }
-     @return $target / $context + 0em;
-  }
-
-  $fnt-giga: em(56px, 16px);
-  $fnt-xlrg: em(36px, 16px);
-  $fnt-lrg: em(26px, 16px);
-  $fnt-med: em(18px, 16px);
-  $fnt-reg: em(14px, 16px);
-  $fnt-sml: em(12px, 16px);
-  $fnt-xsml: em(12px, 16px);
+  $fnt-lrg: 48;
+  $fnt-med: 24;
+  $fnt-sml: 12;
 
 
 /* Layout
   -------------------------------------------------------- */ 
 
-  $max-width: 64.000em;
+  $max-width: 1024px;
 
 
 /* Breakpoints
   -------------------------------------------------------- */
 
-  $bp-sml: "only screen and (max-width: 30em)"; // 480px
-  $bp-tab: "only screen and (min-width: 30.063em) and (max-width: 47.938em)"; // 481px and 767px
-  $bp-med: "only screen and (min-width: 48.000em) and (max-width: 63.938em)"; // 768px and 1023px
-  $bp-lrg: "only screen and (min-width: 64.000em)"; // 1024px
+  $bp-sml: "only screen and (max-width: 480px)";
+  $bp-sml-up: "only screen and (min-width: 481px)";
+  $bp-med: "only screen and (min-width: 481px) and (max-width: 1023px)"; 
+  $bp-lrg: "only screen and (min-width: 1024px)";
 
-  $bp-sml-up: "only screen and (min-width: 30.063em)"; // 481px
-
-  //@media #{$small} {
-  //  background: red;
-  // }  
+  // @media #{$small} { }
