@@ -10,18 +10,25 @@
  * @package Juxprose Wordpress
  */
 
-get_header(); 
+get_header(); ?>
 
-while ( have_posts() ) : the_post();
+	<div id="primary" class="content-area">
 
-	get_template_part( 'content', 'page' );
+		<?php while ( have_posts() ) : the_post(); ?>
 
-	if ( comments_open() || '0' != get_comments_number() ) :
-		comments_template();
-	endif;
+			<?php get_template_part( 'partials/content', 'page' ); ?>
 
-endwhile;
+			<?php
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+			?>
 
-get_sidebar();
+		<?php endwhile; ?>
 
-get_footer(); ?>
+	</div>
+
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

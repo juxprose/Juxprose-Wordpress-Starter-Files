@@ -29,4 +29,4 @@ jQuery(document).ready(function($) {
   	$menu.toggleClass('active');
   	return false;
 	});
-}); 
+});  
