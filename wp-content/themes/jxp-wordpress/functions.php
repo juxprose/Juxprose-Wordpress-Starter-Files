@@ -142,9 +142,9 @@ function jux_wordpress_scripts() {
   wp_enqueue_script( 'jux_wordpress-picturefill', get_template_directory_uri() . '/bower_components/picturefill/dist/picturefill.min.js', array('jquery'), '20120200', true );
 
   // Modernizer
-  wp_enqueue_script( 'jux_wordpress-modernizer-js', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array('jquery'), '20120200', true );
+  wp_enqueue_script( 'jux_wordpress-modernizer-js', get_template_directory_uri() . '/bower_components/modernizer/modernizr.js', array('jquery'), '20120200', true );
 
-	// Global javascript
+	// Global javascript 
   wp_enqueue_script( 'jux_wordpress-global-js', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '20120200', true );  
 
   // Comments
