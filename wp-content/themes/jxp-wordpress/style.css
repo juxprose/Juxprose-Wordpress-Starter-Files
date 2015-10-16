@@ -3,13 +3,15 @@ Theme Name: Juxprose Wordpress
 Theme URI: https://github.com/juxprose/Juxprose-Wordpress-Starter-Files
 Author: David Flindall
 Author URI: http://www.juxprose.com
-Description: A set of starter files for a Wordpress theme, based on _s and various other bits & pieces from around the web.
-Version: 1.0
-License: GNU General Public License
-License URI: license.txt
-Tags: custom-header, custom-menu, featured-images, custom-background, editor-style, post-formats, sticky-post
-
+Description: A set of starter files for a Wordpress theme, based on _s
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jux_wordpress
+Tags:
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Juxprose Wordpress is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+Juxprose Wordpress is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
